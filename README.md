@@ -1,35 +1,56 @@
 # Mood Detector
 
-O aplicativo para iOS Mood Detector foi criado com o intuito de aprender a treinar um modelo de Machine Learning. O app não possui utilidade prática e foi desenvolvido em Swift, utilizando o CreateML, CoreML e SwiftUI, com um [dataset](https://www.kaggle.com/datasets/nelgiriyewithana/emotions) de posts do Twitter. O projeto foi desenvolvido em equipe, junto com [@André](https://github.com/), [@João Pedro](https://github.com/), [@João Vitor](https://github.com/), [@Matheus Ricardo](https://github.com/) e [@Miqueias](https://github.com/). Após o usuário escrever o que está sentindo, ele é levado a uma página que o aconselha de acordo com o sentimento detectado pelo modelo. No entanto, para se manter fiel à proposta de ser um aplicativo sem utilidade, o conselho é dado em Braille — sistema de leitura e escrita tátil utilizado por pessoas cegas ou com baixa visão para ler e escrever.
+Aplicativo iOS desenvolvido em equipe como primeiro contato com treinamento de modelos de Machine Learning. O app detecta o sentimento descrito pelo usuário em texto e exibe um conselho — propositalmente entregue em Braille, mantendo fiel à proposta que recebemos de ser um aplicativo sem utilidade prática.
 
-## Tela Inicial
-Página Inicial, onde o usuário pode descrevar a emoção sentida:
+## Sobre o Projeto
 
-![homepage](Assets/Menu.PNG)
+O modelo de classificação foi treinado com o [Emotions Dataset](https://www.kaggle.com/datasets/nelgiriyewithana/emotions), composto por posts do Twitter rotulados com seis emoções: tristeza, amor, medo, surpresa, raiva e felicidade.
 
-## Conselhos
-Exibição dos conselhos, recebidos após a analise de nosso Modelo de Machine Learning
+## Funcionamento
 
-### Tristeza
+1. O usuário descreve o que está sentindo na tela inicial
+2. O texto é analisado pelo modelo treinado com CreateML
+3. O app identifica a emoção e exibe um conselho na tela seguinte
+4. O conselho é apresentado em Braille — sistema de leitura e escrita tátil utilizado por pessoas cegas ou com baixa visão
 
-![Tristeza](Assets/Tristeza.PNG)
+## Telas
 
-### Amor
+### Tela Inicial
+Página inicial onde o usuário descreve a emoção sentida.
 
-![Amor](Assets/Amor.PNG)
+<img src="Assets/Menu.PNG" alt="homepage" height="400">
 
-### Medo
+### Conselhos por Emoção
 
-![Medo](Assets/Medo.PNG) 
+<p float="left">
+  <img src="Assets/Tristeza.PNG" alt="Tristeza" height="400">
+  <img src="Assets/Amor.PNG" alt="Amor" height="400">
+  <img src="Assets/Medo.PNG" alt="Medo" height="400">
+  <img src="Assets/Surpresa.PNG" alt="Surpresa" height="400">
+  <img src="Assets/Raiva.PNG" alt="Raiva" height="400">
+  <img src="Assets/Felicidade.PNG" alt="Felicidade" height="400">
+</p>
 
-### Surpresa
+## Tecnologias
 
-![Surpresa](Assets/Surpresa.PNG) 
+- **Swift**
+- **SwiftUI**
+- **CreateML** — treinamento do modelo de classificação de texto
+- **CoreML** — integração do modelo treinado ao app
 
-### Raiva
+## Dataset
 
-![Raiva](Assets/Raiva.PNG) 
+[Emotions Dataset for NLP — Kaggle](https://www.kaggle.com/datasets/nelgiriyewithana/emotions)
 
-### Felicidade
+Posts do Twitter classificados em 6 emoções: tristeza, amor, medo, surpresa, raiva e felicidade.
 
-![Felicidade](Assets/Felicidade.PNG) 
+## Como Rodar
+
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   ```
+2. Abra o `.xcodeproj` no Xcode
+3. Selecione um simulador iOS e pressione Run (`Cmd + R`)
+
+> Requisito: Xcode 14+ e iOS 16+
